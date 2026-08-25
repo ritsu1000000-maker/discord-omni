@@ -1,0 +1,1007 @@
+[
+  {
+    "name": "get_gateway",
+    "method": "GET",
+    "path": "/gateway"
+  },
+  {
+    "name": "get_gateway_bot",
+    "method": "GET",
+    "path": "/gateway/bot"
+  },
+  {
+    "name": "get_current_user",
+    "method": "GET",
+    "path": "/users/@me"
+  },
+  {
+    "name": "edit_current_user",
+    "method": "PATCH",
+    "path": "/users/@me"
+  },
+  {
+    "name": "get_user",
+    "method": "GET",
+    "path": "/users/{user_id}"
+  },
+  {
+    "name": "create_dm",
+    "method": "POST",
+    "path": "/users/@me/channels"
+  },
+  {
+    "name": "get_current_user_guilds",
+    "method": "GET",
+    "path": "/users/@me/guilds"
+  },
+  {
+    "name": "leave_guild",
+    "method": "DELETE",
+    "path": "/users/@me/guilds/{guild_id}"
+  },
+  {
+    "name": "get_current_application",
+    "method": "GET",
+    "path": "/oauth2/applications/@me"
+  },
+  {
+    "name": "edit_current_application",
+    "method": "PATCH",
+    "path": "/applications/@me"
+  },
+  {
+    "name": "get_channel",
+    "method": "GET",
+    "path": "/channels/{channel_id}"
+  },
+  {
+    "name": "modify_channel",
+    "method": "PATCH",
+    "path": "/channels/{channel_id}"
+  },
+  {
+    "name": "delete_channel",
+    "method": "DELETE",
+    "path": "/channels/{channel_id}"
+  },
+  {
+    "name": "get_messages",
+    "method": "GET",
+    "path": "/channels/{channel_id}/messages"
+  },
+  {
+    "name": "get_message",
+    "method": "GET",
+    "path": "/channels/{channel_id}/messages/{message_id}"
+  },
+  {
+    "name": "create_message",
+    "method": "POST",
+    "path": "/channels/{channel_id}/messages"
+  },
+  {
+    "name": "edit_message",
+    "method": "PATCH",
+    "path": "/channels/{channel_id}/messages/{message_id}"
+  },
+  {
+    "name": "delete_message",
+    "method": "DELETE",
+    "path": "/channels/{channel_id}/messages/{message_id}"
+  },
+  {
+    "name": "bulk_delete_messages",
+    "method": "POST",
+    "path": "/channels/{channel_id}/messages/bulk-delete"
+  },
+  {
+    "name": "crosspost_message",
+    "method": "POST",
+    "path": "/channels/{channel_id}/messages/{message_id}/crosspost"
+  },
+  {
+    "name": "trigger_typing",
+    "method": "POST",
+    "path": "/channels/{channel_id}/typing"
+  },
+  {
+    "name": "pin_message",
+    "method": "PUT",
+    "path": "/channels/{channel_id}/messages/pins/{message_id}"
+  },
+  {
+    "name": "unpin_message",
+    "method": "DELETE",
+    "path": "/channels/{channel_id}/messages/pins/{message_id}"
+  },
+  {
+    "name": "get_pins",
+    "method": "GET",
+    "path": "/channels/{channel_id}/messages/pins"
+  },
+  {
+    "name": "edit_voice_channel_status",
+    "method": "PUT",
+    "path": "/channels/{channel_id}/voice-status"
+  },
+  {
+    "name": "follow_announcement_channel",
+    "method": "POST",
+    "path": "/channels/{channel_id}/followers"
+  },
+  {
+    "name": "add_reaction",
+    "method": "PUT",
+    "path": "/channels/{channel_id}/messages/{message_id}/reactions/{emoji}/@me"
+  },
+  {
+    "name": "remove_own_reaction",
+    "method": "DELETE",
+    "path": "/channels/{channel_id}/messages/{message_id}/reactions/{emoji}/@me"
+  },
+  {
+    "name": "remove_user_reaction",
+    "method": "DELETE",
+    "path": "/channels/{channel_id}/messages/{message_id}/reactions/{emoji}/{user_id}"
+  },
+  {
+    "name": "get_reactions",
+    "method": "GET",
+    "path": "/channels/{channel_id}/messages/{message_id}/reactions/{emoji}"
+  },
+  {
+    "name": "clear_reactions",
+    "method": "DELETE",
+    "path": "/channels/{channel_id}/messages/{message_id}/reactions"
+  },
+  {
+    "name": "clear_emoji_reactions",
+    "method": "DELETE",
+    "path": "/channels/{channel_id}/messages/{message_id}/reactions/{emoji}"
+  },
+  {
+    "name": "edit_channel_permissions",
+    "method": "PUT",
+    "path": "/channels/{channel_id}/permissions/{target_id}"
+  },
+  {
+    "name": "delete_channel_permissions",
+    "method": "DELETE",
+    "path": "/channels/{channel_id}/permissions/{target_id}"
+  },
+  {
+    "name": "start_thread_from_message",
+    "method": "POST",
+    "path": "/channels/{channel_id}/messages/{message_id}/threads"
+  },
+  {
+    "name": "start_thread",
+    "method": "POST",
+    "path": "/channels/{channel_id}/threads"
+  },
+  {
+    "name": "join_thread",
+    "method": "PUT",
+    "path": "/channels/{channel_id}/thread-members/@me"
+  },
+  {
+    "name": "leave_thread",
+    "method": "DELETE",
+    "path": "/channels/{channel_id}/thread-members/@me"
+  },
+  {
+    "name": "add_thread_member",
+    "method": "PUT",
+    "path": "/channels/{channel_id}/thread-members/{user_id}"
+  },
+  {
+    "name": "remove_thread_member",
+    "method": "DELETE",
+    "path": "/channels/{channel_id}/thread-members/{user_id}"
+  },
+  {
+    "name": "get_thread_member",
+    "method": "GET",
+    "path": "/channels/{channel_id}/thread-members/{user_id}"
+  },
+  {
+    "name": "list_thread_members",
+    "method": "GET",
+    "path": "/channels/{channel_id}/thread-members"
+  },
+  {
+    "name": "list_public_archived_threads",
+    "method": "GET",
+    "path": "/channels/{channel_id}/threads/archived/public"
+  },
+  {
+    "name": "list_private_archived_threads",
+    "method": "GET",
+    "path": "/channels/{channel_id}/threads/archived/private"
+  },
+  {
+    "name": "list_joined_private_archived_threads",
+    "method": "GET",
+    "path": "/channels/{channel_id}/users/@me/threads/archived/private"
+  },
+  {
+    "name": "list_active_guild_threads",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/threads/active"
+  },
+  {
+    "name": "create_guild",
+    "method": "POST",
+    "path": "/guilds"
+  },
+  {
+    "name": "get_guild",
+    "method": "GET",
+    "path": "/guilds/{guild_id}"
+  },
+  {
+    "name": "get_guild_preview",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/preview"
+  },
+  {
+    "name": "modify_guild",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}"
+  },
+  {
+    "name": "delete_guild",
+    "method": "DELETE",
+    "path": "/guilds/{guild_id}"
+  },
+  {
+    "name": "modify_guild_mfa_level",
+    "method": "POST",
+    "path": "/guilds/{guild_id}/mfa"
+  },
+  {
+    "name": "get_guild_channels",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/channels"
+  },
+  {
+    "name": "create_guild_channel",
+    "method": "POST",
+    "path": "/guilds/{guild_id}/channels"
+  },
+  {
+    "name": "modify_guild_channel_positions",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/channels"
+  },
+  {
+    "name": "get_guild_vanity_url",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/vanity-url"
+  },
+  {
+    "name": "modify_guild_vanity_url",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/vanity-url"
+  },
+  {
+    "name": "get_guild_widget",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/widget.json"
+  },
+  {
+    "name": "modify_guild_widget",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/widget"
+  },
+  {
+    "name": "modify_incident_actions",
+    "method": "PUT",
+    "path": "/guilds/{guild_id}/incident-actions"
+  },
+  {
+    "name": "get_audit_log",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/audit-logs"
+  },
+  {
+    "name": "list_members",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/members"
+  },
+  {
+    "name": "get_member",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/members/{user_id}"
+  },
+  {
+    "name": "modify_member",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/members/{user_id}"
+  },
+  {
+    "name": "modify_current_member",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/members/@me"
+  },
+  {
+    "name": "remove_member",
+    "method": "DELETE",
+    "path": "/guilds/{guild_id}/members/{user_id}"
+  },
+  {
+    "name": "add_member_role",
+    "method": "PUT",
+    "path": "/guilds/{guild_id}/members/{user_id}/roles/{role_id}"
+  },
+  {
+    "name": "remove_member_role",
+    "method": "DELETE",
+    "path": "/guilds/{guild_id}/members/{user_id}/roles/{role_id}"
+  },
+  {
+    "name": "list_bans",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/bans"
+  },
+  {
+    "name": "get_ban",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/bans/{user_id}"
+  },
+  {
+    "name": "create_ban",
+    "method": "PUT",
+    "path": "/guilds/{guild_id}/bans/{user_id}"
+  },
+  {
+    "name": "remove_ban",
+    "method": "DELETE",
+    "path": "/guilds/{guild_id}/bans/{user_id}"
+  },
+  {
+    "name": "bulk_ban",
+    "method": "POST",
+    "path": "/guilds/{guild_id}/bulk-ban"
+  },
+  {
+    "name": "begin_prune",
+    "method": "POST",
+    "path": "/guilds/{guild_id}/prune"
+  },
+  {
+    "name": "get_prune_count",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/prune"
+  },
+  {
+    "name": "get_current_voice_state",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/voice-states/@me"
+  },
+  {
+    "name": "modify_current_voice_state",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/voice-states/@me"
+  },
+  {
+    "name": "get_voice_state",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/voice-states/{user_id}"
+  },
+  {
+    "name": "modify_voice_state",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/voice-states/{user_id}"
+  },
+  {
+    "name": "list_roles",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/roles"
+  },
+  {
+    "name": "get_role",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/roles/{role_id}"
+  },
+  {
+    "name": "get_role_member_counts",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/roles/member-counts"
+  },
+  {
+    "name": "create_role",
+    "method": "POST",
+    "path": "/guilds/{guild_id}/roles"
+  },
+  {
+    "name": "modify_role_positions",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/roles"
+  },
+  {
+    "name": "modify_role",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/roles/{role_id}"
+  },
+  {
+    "name": "delete_role",
+    "method": "DELETE",
+    "path": "/guilds/{guild_id}/roles/{role_id}"
+  },
+  {
+    "name": "create_invite",
+    "method": "POST",
+    "path": "/channels/{channel_id}/invites"
+  },
+  {
+    "name": "get_channel_invites",
+    "method": "GET",
+    "path": "/channels/{channel_id}/invites"
+  },
+  {
+    "name": "get_guild_invites",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/invites"
+  },
+  {
+    "name": "get_invite",
+    "method": "GET",
+    "path": "/invites/{invite_code}"
+  },
+  {
+    "name": "delete_invite",
+    "method": "DELETE",
+    "path": "/invites/{invite_code}"
+  },
+  {
+    "name": "get_template",
+    "method": "GET",
+    "path": "/guilds/templates/{template_code}"
+  },
+  {
+    "name": "create_guild_from_template",
+    "method": "POST",
+    "path": "/guilds/templates/{template_code}"
+  },
+  {
+    "name": "get_guild_templates",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/templates"
+  },
+  {
+    "name": "create_guild_template",
+    "method": "POST",
+    "path": "/guilds/{guild_id}/templates"
+  },
+  {
+    "name": "sync_guild_template",
+    "method": "PUT",
+    "path": "/guilds/{guild_id}/templates/{template_code}"
+  },
+  {
+    "name": "modify_guild_template",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/templates/{template_code}"
+  },
+  {
+    "name": "delete_guild_template",
+    "method": "DELETE",
+    "path": "/guilds/{guild_id}/templates/{template_code}"
+  },
+  {
+    "name": "get_welcome_screen",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/welcome-screen"
+  },
+  {
+    "name": "modify_welcome_screen",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/welcome-screen"
+  },
+  {
+    "name": "get_guild_onboarding",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/onboarding"
+  },
+  {
+    "name": "modify_guild_onboarding",
+    "method": "PUT",
+    "path": "/guilds/{guild_id}/onboarding"
+  },
+  {
+    "name": "get_guild_integrations",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/integrations"
+  },
+  {
+    "name": "create_guild_integration",
+    "method": "POST",
+    "path": "/guilds/{guild_id}/integrations"
+  },
+  {
+    "name": "modify_guild_integration",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/integrations/{integration_id}"
+  },
+  {
+    "name": "delete_guild_integration",
+    "method": "DELETE",
+    "path": "/guilds/{guild_id}/integrations/{integration_id}"
+  },
+  {
+    "name": "sync_guild_integration",
+    "method": "POST",
+    "path": "/guilds/{guild_id}/integrations/{integration_id}/sync"
+  },
+  {
+    "name": "list_guild_emojis",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/emojis"
+  },
+  {
+    "name": "get_guild_emoji",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/emojis/{emoji_id}"
+  },
+  {
+    "name": "create_guild_emoji",
+    "method": "POST",
+    "path": "/guilds/{guild_id}/emojis"
+  },
+  {
+    "name": "modify_guild_emoji",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/emojis/{emoji_id}"
+  },
+  {
+    "name": "delete_guild_emoji",
+    "method": "DELETE",
+    "path": "/guilds/{guild_id}/emojis/{emoji_id}"
+  },
+  {
+    "name": "get_sticker",
+    "method": "GET",
+    "path": "/stickers/{sticker_id}"
+  },
+  {
+    "name": "get_sticker_pack",
+    "method": "GET",
+    "path": "/sticker-packs/{sticker_pack_id}"
+  },
+  {
+    "name": "list_sticker_packs",
+    "method": "GET",
+    "path": "/sticker-packs"
+  },
+  {
+    "name": "list_guild_stickers",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/stickers"
+  },
+  {
+    "name": "get_guild_sticker",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/stickers/{sticker_id}"
+  },
+  {
+    "name": "create_guild_sticker",
+    "method": "POST",
+    "path": "/guilds/{guild_id}/stickers"
+  },
+  {
+    "name": "modify_guild_sticker",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/stickers/{sticker_id}"
+  },
+  {
+    "name": "delete_guild_sticker",
+    "method": "DELETE",
+    "path": "/guilds/{guild_id}/stickers/{sticker_id}"
+  },
+  {
+    "name": "create_webhook",
+    "method": "POST",
+    "path": "/channels/{channel_id}/webhooks"
+  },
+  {
+    "name": "get_channel_webhooks",
+    "method": "GET",
+    "path": "/channels/{channel_id}/webhooks"
+  },
+  {
+    "name": "get_guild_webhooks",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/webhooks"
+  },
+  {
+    "name": "get_webhook",
+    "method": "GET",
+    "path": "/webhooks/{webhook_id}"
+  },
+  {
+    "name": "modify_webhook",
+    "method": "PATCH",
+    "path": "/webhooks/{webhook_id}"
+  },
+  {
+    "name": "delete_webhook",
+    "method": "DELETE",
+    "path": "/webhooks/{webhook_id}"
+  },
+  {
+    "name": "get_webhook_with_token",
+    "method": "GET",
+    "path": "/webhooks/{webhook_id}/{webhook_token}"
+  },
+  {
+    "name": "modify_webhook_with_token",
+    "method": "PATCH",
+    "path": "/webhooks/{webhook_id}/{webhook_token}"
+  },
+  {
+    "name": "delete_webhook_with_token",
+    "method": "DELETE",
+    "path": "/webhooks/{webhook_id}/{webhook_token}"
+  },
+  {
+    "name": "execute_webhook",
+    "method": "POST",
+    "path": "/webhooks/{webhook_id}/{webhook_token}"
+  },
+  {
+    "name": "get_webhook_message",
+    "method": "GET",
+    "path": "/webhooks/{webhook_id}/{webhook_token}/messages/{message_id}"
+  },
+  {
+    "name": "edit_webhook_message",
+    "method": "PATCH",
+    "path": "/webhooks/{webhook_id}/{webhook_token}/messages/{message_id}"
+  },
+  {
+    "name": "delete_webhook_message",
+    "method": "DELETE",
+    "path": "/webhooks/{webhook_id}/{webhook_token}/messages/{message_id}"
+  },
+  {
+    "name": "create_interaction_response",
+    "method": "POST",
+    "path": "/interactions/{interaction_id}/{interaction_token}/callback"
+  },
+  {
+    "name": "get_original_interaction_response",
+    "method": "GET",
+    "path": "/webhooks/{application_id}/{interaction_token}/messages/@original"
+  },
+  {
+    "name": "edit_original_interaction_response",
+    "method": "PATCH",
+    "path": "/webhooks/{application_id}/{interaction_token}/messages/@original"
+  },
+  {
+    "name": "delete_original_interaction_response",
+    "method": "DELETE",
+    "path": "/webhooks/{application_id}/{interaction_token}/messages/@original"
+  },
+  {
+    "name": "list_global_commands",
+    "method": "GET",
+    "path": "/applications/{application_id}/commands"
+  },
+  {
+    "name": "get_global_command",
+    "method": "GET",
+    "path": "/applications/{application_id}/commands/{command_id}"
+  },
+  {
+    "name": "create_global_command",
+    "method": "POST",
+    "path": "/applications/{application_id}/commands"
+  },
+  {
+    "name": "modify_global_command",
+    "method": "PATCH",
+    "path": "/applications/{application_id}/commands/{command_id}"
+  },
+  {
+    "name": "delete_global_command",
+    "method": "DELETE",
+    "path": "/applications/{application_id}/commands/{command_id}"
+  },
+  {
+    "name": "bulk_overwrite_global_commands",
+    "method": "PUT",
+    "path": "/applications/{application_id}/commands"
+  },
+  {
+    "name": "list_guild_commands",
+    "method": "GET",
+    "path": "/applications/{application_id}/guilds/{guild_id}/commands"
+  },
+  {
+    "name": "get_guild_command",
+    "method": "GET",
+    "path": "/applications/{application_id}/guilds/{guild_id}/commands/{command_id}"
+  },
+  {
+    "name": "create_guild_command",
+    "method": "POST",
+    "path": "/applications/{application_id}/guilds/{guild_id}/commands"
+  },
+  {
+    "name": "modify_guild_command",
+    "method": "PATCH",
+    "path": "/applications/{application_id}/guilds/{guild_id}/commands/{command_id}"
+  },
+  {
+    "name": "delete_guild_command",
+    "method": "DELETE",
+    "path": "/applications/{application_id}/guilds/{guild_id}/commands/{command_id}"
+  },
+  {
+    "name": "bulk_overwrite_guild_commands",
+    "method": "PUT",
+    "path": "/applications/{application_id}/guilds/{guild_id}/commands"
+  },
+  {
+    "name": "get_guild_command_permissions",
+    "method": "GET",
+    "path": "/applications/{application_id}/guilds/{guild_id}/commands/permissions"
+  },
+  {
+    "name": "get_command_permissions",
+    "method": "GET",
+    "path": "/applications/{application_id}/guilds/{guild_id}/commands/{command_id}/permissions"
+  },
+  {
+    "name": "edit_command_permissions",
+    "method": "PUT",
+    "path": "/applications/{application_id}/guilds/{guild_id}/commands/{command_id}/permissions"
+  },
+  {
+    "name": "list_application_emojis",
+    "method": "GET",
+    "path": "/applications/{application_id}/emojis"
+  },
+  {
+    "name": "get_application_emoji",
+    "method": "GET",
+    "path": "/applications/{application_id}/emojis/{emoji_id}"
+  },
+  {
+    "name": "create_application_emoji",
+    "method": "POST",
+    "path": "/applications/{application_id}/emojis"
+  },
+  {
+    "name": "modify_application_emoji",
+    "method": "PATCH",
+    "path": "/applications/{application_id}/emojis/{emoji_id}"
+  },
+  {
+    "name": "delete_application_emoji",
+    "method": "DELETE",
+    "path": "/applications/{application_id}/emojis/{emoji_id}"
+  },
+  {
+    "name": "list_automod_rules",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/auto-moderation/rules"
+  },
+  {
+    "name": "get_automod_rule",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/auto-moderation/rules/{rule_id}"
+  },
+  {
+    "name": "create_automod_rule",
+    "method": "POST",
+    "path": "/guilds/{guild_id}/auto-moderation/rules"
+  },
+  {
+    "name": "modify_automod_rule",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/auto-moderation/rules/{rule_id}"
+  },
+  {
+    "name": "delete_automod_rule",
+    "method": "DELETE",
+    "path": "/guilds/{guild_id}/auto-moderation/rules/{rule_id}"
+  },
+  {
+    "name": "create_stage_instance",
+    "method": "POST",
+    "path": "/stage-instances"
+  },
+  {
+    "name": "get_stage_instance",
+    "method": "GET",
+    "path": "/stage-instances/{channel_id}"
+  },
+  {
+    "name": "modify_stage_instance",
+    "method": "PATCH",
+    "path": "/stage-instances/{channel_id}"
+  },
+  {
+    "name": "delete_stage_instance",
+    "method": "DELETE",
+    "path": "/stage-instances/{channel_id}"
+  },
+  {
+    "name": "list_scheduled_events",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/scheduled-events"
+  },
+  {
+    "name": "create_scheduled_event",
+    "method": "POST",
+    "path": "/guilds/{guild_id}/scheduled-events"
+  },
+  {
+    "name": "get_scheduled_event",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/scheduled-events/{event_id}"
+  },
+  {
+    "name": "modify_scheduled_event",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/scheduled-events/{event_id}"
+  },
+  {
+    "name": "delete_scheduled_event",
+    "method": "DELETE",
+    "path": "/guilds/{guild_id}/scheduled-events/{event_id}"
+  },
+  {
+    "name": "list_scheduled_event_users",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/scheduled-events/{event_id}/users"
+  },
+  {
+    "name": "list_default_soundboard_sounds",
+    "method": "GET",
+    "path": "/soundboard-default-sounds"
+  },
+  {
+    "name": "list_guild_soundboard_sounds",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/soundboard-sounds"
+  },
+  {
+    "name": "get_guild_soundboard_sound",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/soundboard-sounds/{sound_id}"
+  },
+  {
+    "name": "create_guild_soundboard_sound",
+    "method": "POST",
+    "path": "/guilds/{guild_id}/soundboard-sounds"
+  },
+  {
+    "name": "modify_guild_soundboard_sound",
+    "method": "PATCH",
+    "path": "/guilds/{guild_id}/soundboard-sounds/{sound_id}"
+  },
+  {
+    "name": "delete_guild_soundboard_sound",
+    "method": "DELETE",
+    "path": "/guilds/{guild_id}/soundboard-sounds/{sound_id}"
+  },
+  {
+    "name": "send_soundboard_sound",
+    "method": "POST",
+    "path": "/channels/{channel_id}/send-soundboard-sound"
+  },
+  {
+    "name": "get_poll_answer_voters",
+    "method": "GET",
+    "path": "/channels/{channel_id}/polls/{message_id}/answers/{answer_id}"
+  },
+  {
+    "name": "end_poll",
+    "method": "POST",
+    "path": "/channels/{channel_id}/polls/{message_id}/expire"
+  },
+  {
+    "name": "list_skus",
+    "method": "GET",
+    "path": "/applications/{application_id}/skus"
+  },
+  {
+    "name": "list_entitlements",
+    "method": "GET",
+    "path": "/applications/{application_id}/entitlements"
+  },
+  {
+    "name": "get_entitlement",
+    "method": "GET",
+    "path": "/applications/{application_id}/entitlements/{entitlement_id}"
+  },
+  {
+    "name": "consume_entitlement",
+    "method": "POST",
+    "path": "/applications/{application_id}/entitlements/{entitlement_id}/consume"
+  },
+  {
+    "name": "create_test_entitlement",
+    "method": "POST",
+    "path": "/applications/{application_id}/entitlements"
+  },
+  {
+    "name": "delete_test_entitlement",
+    "method": "DELETE",
+    "path": "/applications/{application_id}/entitlements/{entitlement_id}"
+  },
+  {
+    "name": "list_sku_subscriptions",
+    "method": "GET",
+    "path": "/skus/{sku_id}/subscriptions"
+  },
+  {
+    "name": "get_sku_subscription",
+    "method": "GET",
+    "path": "/skus/{sku_id}/subscriptions/{subscription_id}"
+  },
+  {
+    "name": "search_members",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/members/search"
+  },
+  {
+    "name": "list_voice_regions",
+    "method": "GET",
+    "path": "/voice/regions"
+  },
+  {
+    "name": "list_guild_voice_regions",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/regions"
+  },
+  {
+    "name": "get_current_authorization",
+    "method": "GET",
+    "path": "/oauth2/@me"
+  },
+  {
+    "name": "get_current_user_connections",
+    "method": "GET",
+    "path": "/users/@me/connections"
+  },
+  {
+    "name": "get_application_role_connection_metadata",
+    "method": "GET",
+    "path": "/applications/{application_id}/role-connections/metadata"
+  },
+  {
+    "name": "update_application_role_connection_metadata",
+    "method": "PUT",
+    "path": "/applications/{application_id}/role-connections/metadata"
+  },
+  {
+    "name": "get_user_application_role_connection",
+    "method": "GET",
+    "path": "/users/@me/applications/{application_id}/role-connection"
+  },
+  {
+    "name": "update_user_application_role_connection",
+    "method": "PUT",
+    "path": "/users/@me/applications/{application_id}/role-connection"
+  },
+  {
+    "name": "get_guild_widget_settings",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/widget"
+  },
+  {
+    "name": "get_guild_widget_json",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/widget.json"
+  },
+  {
+    "name": "get_guild_widget_image",
+    "method": "GET",
+    "path": "/guilds/{guild_id}/widget.png"
+  }
+]

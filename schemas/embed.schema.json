@@ -1,0 +1,22 @@
+{
+  "title": "Discord Embed",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "maxLength": 256
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 4096
+    },
+    "color": {
+      "type": "integer"
+    },
+    "fields": {
+      "type": "array",
+      "maxItems": 25
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

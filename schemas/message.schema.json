@@ -1,0 +1,25 @@
+{
+  "title": "Discord Message",
+  "type": "object",
+  "required": [
+    "id",
+    "channel_id",
+    "author",
+    "content"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "channel_id": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "author": {
+      "$ref": "user.schema.json"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

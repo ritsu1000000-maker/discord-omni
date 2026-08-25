@@ -1,0 +1,5 @@
+services:
+  toolkit:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.python

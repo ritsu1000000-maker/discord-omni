@@ -1,0 +1,25 @@
+{
+  "version": "1.0.1",
+  "official_routes": 201,
+  "power_helpers": 217,
+  "languages": [
+    "python",
+    "typescript",
+    "javascript",
+    "json",
+    "yaml",
+    "powershell",
+    "bash"
+  ],
+  "layers": [
+    "rest",
+    "gateway",
+    "oauth2",
+    "webhook",
+    "interactions",
+    "components",
+    "advanced",
+    "community",
+    "cli"
+  ]
+}

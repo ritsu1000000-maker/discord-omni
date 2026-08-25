@@ -1,0 +1,85 @@
+{
+  "package_version": "1.0.1",
+  "policy": "official-public-api-only",
+  "upstream": {
+    "repository": "Rapptz/discord.py",
+    "branch": "master",
+    "http_py_blob_sha": "eb58b785c2e2ef52efd2ce3f995c74708053546f",
+    "webhook_async_blob_sha": "c30d286f4e67c5a7318ddd76c47c9f51082adaa7",
+    "files_reviewed": [
+      "discord/http.py",
+      "discord/webhook/async_.py",
+      "discord/gateway.py"
+    ],
+    "commit": "1add8a0b40577186431cdb5f63f97affadab285b",
+    "commit_date": "2026-07-22"
+  },
+  "notes": [
+    "Routes are independently wrapped; discord.py source code is not vendored.",
+    "No private Discord client endpoints or self-bot/user-token automation are included.",
+    "REST base is https://discord.com/api/v10 and Gateway is wss://gateway.discord.gg."
+  ],
+  "community_extensions": {
+    "isolated_namespace": "discord_omni.community",
+    "providers": [
+      {
+        "name": "Top.gg",
+        "base_url": "https://top.gg/api/v1",
+        "purpose": "bot/server listing metrics, project metadata, commands metadata, vote webhook parsing",
+        "not_discord_private_api": true
+      }
+    ],
+    "policy": "Third-party APIs are isolated and never added to OFFICIAL_ROUTES."
+  },
+  "max_layer": {
+    "DiscordApp": true,
+    "EmbedBuilder": true,
+    "PollBuilder": true,
+    "AllowedMentions": true,
+    "Permissions": true,
+    "Snowflake": true,
+    "RouteSnapshot": true,
+    "LocalDiscordPyRouteScanner": true
+  },
+  "power_helpers": {
+    "count": 217,
+    "module": "discord_omni.power_tools",
+    "documentation": "POWER_FEATURES.md",
+    "private_discord_api": false,
+    "self_bot": false
+  },
+  "advanced_layer": {
+    "feature_count": 42,
+    "modules": [
+      "state",
+      "limits",
+      "custom_id",
+      "events",
+      "middleware",
+      "plugins",
+      "permission_resolver",
+      "router",
+      "metrics",
+      "testing",
+      "app"
+    ],
+    "private_discord_api": false,
+    "self_bot": false
+  },
+  "mega_sdk": {
+    "typescript": true,
+    "javascript": true,
+    "web_dashboard": false,
+    "cli": true,
+    "json_schemas": 10,
+    "openapi": true,
+    "protocol_registry": true,
+    "docker": true,
+    "scripts": [
+      "powershell",
+      "bash"
+    ],
+    "github_actions": true,
+    "generated_registry": true
+  }
+}

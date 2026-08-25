@@ -1,0 +1,9 @@
+{
+  "api_version": 10,
+  "gateway_encoding": "json",
+  "gateway_compression": "zlib-stream",
+  "http_timeout": 25,
+  "http_retries": 3,
+  "state_ttl_seconds": 900,
+  "cache_max_size": 5000
+}
