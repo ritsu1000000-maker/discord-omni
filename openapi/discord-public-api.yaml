@@ -1,0 +1,58 @@
+openapi: 3.1.0
+info:
+  title: Discord Omni Public API Subset
+  version: 1.0.0
+  description: >
+    discord-omniで利用するDiscord公開APIの代表的なルート定義。
+    private/internal client APIは含まない。
+servers:
+  - url: https://discord.com/api/v10
+components:
+  securitySchemes:
+    BotToken:
+      type: http
+      scheme: bearer
+  schemas:
+    MessageCreate:
+      type: object
+      properties:
+        content:
+          type: string
+          maxLength: 2000
+security:
+  - BotToken: []
+paths:
+  /users/@me:
+    get:
+      operationId: getCurrentUser
+      responses:
+        "200":
+          description: Current user
+  /guilds/{guild_id}:
+    get:
+      operationId: getGuild
+      parameters:
+        - name: guild_id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: Guild
+  /channels/{channel_id}/messages:
+    post:
+      operationId: createMessage
+      parameters:
+        - name: channel_id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MessageCreate"
+      responses:
+        "200":
+          description: Message

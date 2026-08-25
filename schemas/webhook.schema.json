@@ -1,0 +1,35 @@
+{
+  "title": "Discord Webhook",
+  "type": "object",
+  "required": [
+    "id",
+    "type"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "integer"
+    },
+    "guild_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "channel_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "token": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

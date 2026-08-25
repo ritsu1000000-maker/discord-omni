@@ -1,0 +1,7 @@
+{
+  "message_content": 2000,
+  "embeds_per_message": 10,
+  "files_per_message": 10,
+  "component_custom_id": 100,
+  "gateway_payload_bytes": 4096
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Discord Interaction",
+  "type": "object",
+  "required": [
+    "id",
+    "application_id",
+    "type",
+    "token"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "application_id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "integer"
+    },
+    "token": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

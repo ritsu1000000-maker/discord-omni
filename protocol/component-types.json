@@ -1,0 +1,22 @@
+{
+  "1": "ACTION_ROW",
+  "2": "BUTTON",
+  "3": "STRING_SELECT",
+  "4": "TEXT_INPUT",
+  "5": "USER_SELECT",
+  "6": "ROLE_SELECT",
+  "7": "MENTIONABLE_SELECT",
+  "8": "CHANNEL_SELECT",
+  "9": "SECTION",
+  "10": "TEXT_DISPLAY",
+  "11": "THUMBNAIL",
+  "12": "MEDIA_GALLERY",
+  "13": "FILE",
+  "14": "SEPARATOR",
+  "17": "CONTAINER",
+  "18": "LABEL",
+  "19": "FILE_UPLOAD",
+  "21": "RADIO_GROUP",
+  "22": "CHECKBOX_GROUP",
+  "23": "CHECKBOX"
+}
