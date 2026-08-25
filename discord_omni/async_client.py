@@ -25,7 +25,7 @@ class AsyncDiscordClient(EndpointMixin):
         return await self.official.call(route_name, **kwargs)
 
     async def get_message_model(self, channel_id, message_id):
-        return model("message", await self.get_message(channel_id, message_id))
+        return model("message", await self.official.get_message(channel_id=channel_id, message_id=message_id))
 
     async def get_channel_model(self, channel_id):
         return model("channel", await self.get_channel(channel_id))
@@ -39,7 +39,10 @@ class AsyncDiscordClient(EndpointMixin):
     async def iter_members(self, guild_id, *, page_size=1000):
         after = None
         while True:
-            page = await self.list_members(guild_id, limit=page_size, after=after)
+            page = await self.official.list_members(
+                guild_id=guild_id,
+                params={"limit": page_size, **({"after": after} if after else {})},
+            )
             if not page:
                 return
             for item in page:
@@ -54,7 +57,10 @@ class AsyncDiscordClient(EndpointMixin):
     async def iter_messages(self, channel_id, *, page_size=100, before=None):
         cursor = before
         while True:
-            page = await self.get_messages(channel_id, limit=page_size, before=cursor)
+            params = {"limit": page_size}
+            if cursor:
+                params["before"] = cursor
+            page = await self.official.get_messages(channel_id=channel_id, params=params)
             if not page:
                 return
             for item in page:
@@ -65,22 +71,26 @@ class AsyncDiscordClient(EndpointMixin):
             if not cursor:
                 return
 
-async def send(self, channel_id, content=None, *, embeds=None, components=None,
-               allowed_mentions=None, poll=None, flags=None, tts=False,
-               nonce=None, message_reference=None):
-    """Convenient async message sender using structured builders."""
-    payload = message_payload(
-        content,
-        embeds=embeds,
-        components=components,
-        allowed_mentions=allowed_mentions,
-        poll=poll,
-        flags=flags,
-        tts=tts,
-        nonce=nonce,
-        message_reference=message_reference,
-    )
-    return await self.official.create_message(channel_id=channel_id, json=payload)
+    async def send(self, channel_id, content=None, *, embeds=None, components=None,
+                   allowed_mentions=None, poll=None, flags=None, tts=False,
+                   nonce=None, message_reference=None):
+        """Convenient async message sender using structured builders."""
+        payload = message_payload(
+            content,
+            embeds=embeds,
+            components=components,
+            allowed_mentions=allowed_mentions,
+            poll=poll,
+            flags=flags,
+            tts=tts,
+            nonce=nonce,
+            message_reference=message_reference,
+        )
+        return await self.official.create_message(channel_id=channel_id, json=payload)
 
-async def fetch(self, route_name, **kwargs):
-    return await self.official_request(route_name, **kwargs)
+    async def fetch(self, route_name, **kwargs):
+        return await self.official_request(route_name, **kwargs)
+
+    def editor(self, guild_id):
+        from .editor import AsyncGuildEditor
+        return AsyncGuildEditor(self, guild_id)

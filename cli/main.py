@@ -28,6 +28,14 @@ def cmd_features(args):
         print(name)
 
 
+def cmd_snapshot_diff(args):
+    from discord_omni.editor.serialization import load
+    from discord_omni.editor.diff import build_plan
+    current = load(args.current)
+    desired = load(args.desired)
+    print(json.dumps(build_plan(current, desired).to_dict(), indent=2, ensure_ascii=False))
+
+
 def build_parser():
     parser = argparse.ArgumentParser(prog="discord-omni")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -42,6 +50,11 @@ def build_parser():
     features = sub.add_parser("features")
     features.add_argument("--search")
     features.set_defaults(func=cmd_features)
+
+    snap = sub.add_parser("snapshot-diff")
+    snap.add_argument("current")
+    snap.add_argument("desired")
+    snap.set_defaults(func=cmd_snapshot_diff)
 
     return parser
 

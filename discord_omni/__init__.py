@@ -24,9 +24,9 @@ from .components import *
 from .models import User, Member, Guild, Channel, Message, Role
 from .errors import *
 
-__version__ = "1.0.1"
+__version__ = "1.1.0"
 
 from . import power_tools
 from .feature_registry import power_feature_names, power_feature_count, find_power_features
-
 from .advanced import AdvancedDiscordApp
+from .editor import GuildEditor, AsyncGuildEditor, EditorPolicy, MemberEditor, AutoModEditor

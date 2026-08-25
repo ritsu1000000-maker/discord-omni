@@ -26,23 +26,28 @@ class DiscordClient(EndpointMixin):
     def get_member_model(self, guild_id, user_id):
         return model("member", self.get_member(guild_id, user_id))
 
-def send(self, channel_id, content=None, *, embeds=None, components=None,
-         allowed_mentions=None, poll=None, flags=None, tts=False,
-         nonce=None, message_reference=None):
-    """Convenient message sender using structured builders."""
-    payload = message_payload(
-        content,
-        embeds=embeds,
-        components=components,
-        allowed_mentions=allowed_mentions,
-        poll=poll,
-        flags=flags,
-        tts=tts,
-        nonce=nonce,
-        message_reference=message_reference,
-    )
-    return self.official.create_message(channel_id=channel_id, json=payload)
+    def send(self, channel_id, content=None, *, embeds=None, components=None,
+             allowed_mentions=None, poll=None, flags=None, tts=False,
+             nonce=None, message_reference=None):
+        """Convenient message sender using structured builders."""
+        payload = message_payload(
+            content,
+            embeds=embeds,
+            components=components,
+            allowed_mentions=allowed_mentions,
+            poll=poll,
+            flags=flags,
+            tts=tts,
+            nonce=nonce,
+            message_reference=message_reference,
+        )
+        return self.official.create_message(channel_id=channel_id, json=payload)
 
-def fetch(self, route_name, **kwargs):
-    """Alias for official_request; only the official route registry is accepted."""
-    return self.official_request(route_name, **kwargs)
+    def fetch(self, route_name, **kwargs):
+        """Alias for official_request; only the official route registry is accepted."""
+        return self.official_request(route_name, **kwargs)
+
+    def editor(self, guild_id):
+        """Return a high-level declarative GuildEditor."""
+        from .editor import GuildEditor
+        return GuildEditor(self, guild_id)

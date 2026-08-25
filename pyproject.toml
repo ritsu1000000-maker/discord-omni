@@ -4,12 +4,24 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "discord-omni-api"
-version = "1.0.1"
+version = "1.1.0"
 description = "Direct Discord API framework: sync/async REST, Gateway, Components V2, Interactions, OAuth2, Webhooks and typed models."
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "MIT"}
+license = "MIT"
 authors = [{name = "discord-omni-api contributors"}]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
 dependencies = [
   "requests>=2.31.0",
   "httpx>=0.27.0",
@@ -18,7 +30,12 @@ dependencies = [
   "PyNaCl>=1.5.0"
 ]
 
+[project.scripts]
+discord-omni = "cli.main:main"
+
 [project.urls]
+Homepage = "https://github.com/ritsu1000000-maker/discord-omni"
+Repository = "https://github.com/ritsu1000000-maker/discord-omni"
 Documentation = "https://docs.discord.com/developers/intro"
 
 [tool.setuptools.packages.find]
